@@ -6,7 +6,6 @@ public class EndingLINE : MonoBehaviour
 {
     public GameObject uiObject;
     public GameObject player;
-
     private void Start()
     {
         uiObject.SetActive(false);
