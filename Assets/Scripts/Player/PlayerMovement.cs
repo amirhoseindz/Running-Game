@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private float _movingAsideSpeed = 2f;
     private Vector3 _tempPos;
     private Camera _cam;
-    private Collider _roadCollider;
+    public Collider _roadCollider;
     private RaycastHit _hit;
     private Ray _ray;
 
