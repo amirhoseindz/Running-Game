@@ -7,7 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public  Collider _roadCollider;
     
-    private float _moveSpeed = 1.5f;
+    private float _moveSpeed = 2f;
+    private float _maxMoveSpeed = 8f;
     private float _movingAsideSpeed = 2f;
     private Vector3 _tempPos;
     private Camera _cam;
@@ -21,6 +22,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (_moveSpeed < _maxMoveSpeed)
+        {
+            _moveSpeed += 0.1f * Time.deltaTime;
+        }
         transform.Translate (Time.deltaTime * _moveSpeed * Vector3.forward, Space.World);
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
