@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private float _moveSpeed = 2f;
     private float _maxMoveSpeed = 8f;
     private float _movingAsideSpeed = 2f;
+    private float _maxMovingAsideSpeed = 2f;
     private Vector3 _tempPos;
     private Camera _cam;
     private RaycastHit _hit;
@@ -25,6 +26,10 @@ public class PlayerMovement : MonoBehaviour
         if (_moveSpeed < _maxMoveSpeed)
         {
             _moveSpeed += 0.1f * Time.deltaTime;
+            if (_movingAsideSpeed < _maxMovingAsideSpeed)
+            {
+                _movingAsideSpeed += 0.05f;
+            }
         }
         transform.Translate (Time.deltaTime * _moveSpeed * Vector3.forward, Space.World);
 
