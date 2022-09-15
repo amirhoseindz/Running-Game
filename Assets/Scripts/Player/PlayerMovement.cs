@@ -55,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 _tempPos = _hit.point;
                 _tempPos.y = 0.3f;
+                _tempPos.z = transform.position.z;
                 transform.position = Vector3.MoveTowards(transform.position, _tempPos, Time.deltaTime);
             }
         }
