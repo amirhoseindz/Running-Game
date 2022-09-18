@@ -1631,7 +1631,7 @@ MonoBehaviour:
   - {fileID: 42839406}
   - {fileID: 868141612}
   zPos: 20
-  creatingSection: 0
+  player: {fileID: 993517558}
 --- !u!114 &396472156
 MonoBehaviour:
   m_ObjectHideFlags: 0
