@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public  Collider _roadCollider;
-    
     private float _moveSpeed = 2f;
     private float _maxMoveSpeed = 8f;
     private float _movingAsideSpeed = 2f;
